@@ -90,7 +90,7 @@ namespace csv_file_namespace {
 		}
 
 		/** 
-		@brief データを取得
+		@brief データを設定
 		@param row 行
 		@param column 列
 		@param data データ

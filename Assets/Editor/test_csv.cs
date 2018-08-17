@@ -7,11 +7,19 @@ using UnityEngine.TestTools;
 
 public class csv_test {
 
-    private string get_test_file_name () {
+    /** 
+    @brief テスト用のファイル名を取得
+    @return string ファイル名
+    @details 特になし
+    */
+    private string get_test_file_name (bool isDisplayFileName = false) {
         utility my_util = new utility ();
         my_util.set_file_name (Application.persistentDataPath + "\\test\\");
-        //Debug.Log (Application.persistentDataPath);
 
+        if (isDisplayFileName) {
+            Debug.Log ("テスト用ファイル");
+            Debug.Log (Application.persistentDataPath);
+        }
         return my_util.get_file_name ();
     }
 
@@ -39,6 +47,21 @@ public class csv_test {
 
         //テスト
         //test_obj.save_to_file ("D: \\Unity\\ Android_Sample\\ Assets\\ resource\\ output.txt ");
+    }
+
+    [Test]
+    public void test_get_data () {
+
+    }
+
+    [Test]
+    public void test_set_data () {
+
+    }
+
+    [Test]
+    public void test_get_task_number () {
+
     }
 
     [Test]

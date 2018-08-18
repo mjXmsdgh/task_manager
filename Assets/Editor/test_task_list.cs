@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.IO;
 using NUnit.Framework;
 using task_data_namespace;
 using task_list_namespace;
@@ -8,6 +10,12 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 public class test_task_list {
+    private utility get_util () {
+        utility my_util = new utility ();
+        my_util.set_file_name (Application.persistentDataPath + "\\test\\");
+
+        return my_util;
+    }
 
     /** 
     @brief テスト用のファイル名を取得
@@ -15,14 +23,23 @@ public class test_task_list {
     @details 特になし
     */
     private string get_test_file_name (bool isDisplayFileName = false) {
-        utility my_util = new utility ();
-        my_util.set_file_name (Application.persistentDataPath + "\\test\\");
+        utility my_util = get_util ();
 
         if (isDisplayFileName) {
             Debug.Log ("テスト用ファイル");
             Debug.Log (Application.persistentDataPath);
         }
         return my_util.get_file_name ();
+    }
+
+    private void delete_test_folder () {
+        utility my_util = get_util ();
+
+        //ファイルを削除
+        FileInfo file = new FileInfo (my_util.get_file_name ());
+        file.Delete ();
+
+        //フォルダを削除
     }
 
     [Test]
@@ -54,6 +71,9 @@ public class test_task_list {
         Assert.AreEqual ("test_name4", test_obj.my_task_list[3].name);
         Assert.AreEqual ("test_detail4", test_obj.my_task_list[3].detail);
         Assert.AreEqual ("test_status4", test_obj.my_task_list[3].status);
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
     [Test]
@@ -68,6 +88,9 @@ public class test_task_list {
 
         //テスト
         Assert.AreEqual (4, num);
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
 }

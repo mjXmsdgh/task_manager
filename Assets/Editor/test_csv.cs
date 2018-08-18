@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.IO;
 using csv_file_namespace;
 using NUnit.Framework;
 using utility_namespace;
@@ -7,20 +9,37 @@ using UnityEngine.TestTools;
 
 public class csv_test {
 
+    private utility get_util () {
+        utility my_util = new utility ();
+        my_util.set_file_name (Application.persistentDataPath + "\\test\\");
+
+        return my_util;
+    }
+
     /** 
     @brief テスト用のファイル名を取得
     @return string ファイル名
     @details 特になし
     */
     private string get_test_file_name (bool isDisplayFileName = false) {
-        utility my_util = new utility ();
-        my_util.set_file_name (Application.persistentDataPath + "\\test\\");
+        utility my_util = get_util ();
 
         if (isDisplayFileName) {
             Debug.Log ("テスト用ファイル");
             Debug.Log (Application.persistentDataPath);
         }
+
         return my_util.get_file_name ();
+    }
+
+    private void delete_test_folder () {
+        utility my_util = get_util ();
+
+        //ファイルを削除
+        FileInfo file = new FileInfo (my_util.get_file_name ());
+        file.Delete ();
+
+        //フォルダを削除
     }
 
     [Test]
@@ -37,6 +56,9 @@ public class csv_test {
         Assert.AreEqual ("test_name1", test_obj.get_data (0, 1));
         Assert.AreEqual ("test_detail1", test_obj.get_data (0, 2));
         Assert.AreEqual ("test_status1", test_obj.get_data (0, 3));
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
     [Test]
@@ -47,6 +69,9 @@ public class csv_test {
 
         //テスト
         Assert.AreEqual (true, System.IO.File.Exists (get_test_file_name ()));
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
     [Test]
@@ -71,6 +96,9 @@ public class csv_test {
 
         //処理後テスト
         Assert.AreEqual ("test_string", test_obj.get_data (0, 0));
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
     [Test]
@@ -93,6 +121,9 @@ public class csv_test {
         Assert.AreEqual ("new_task_name", test_obj.get_data (4, 1));
         Assert.AreEqual ("new_task_detail", test_obj.get_data (4, 2));
         Assert.AreEqual ("new_status", test_obj.get_data (4, 3));
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
     [Test]
@@ -108,6 +139,9 @@ public class csv_test {
         Assert.AreEqual ("2", test_obj.get_data (0, 0));
         Assert.AreEqual ("3", test_obj.get_data (1, 0));
         Assert.AreEqual ("4", test_obj.get_data (2, 0));
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 
     [Test]
@@ -121,5 +155,8 @@ public class csv_test {
 
         //テスト
         Assert.AreEqual (0, test_obj.get_task_number ());
+
+        //ファイルを削除
+        delete_test_folder ();
     }
 }

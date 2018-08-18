@@ -18,7 +18,7 @@ namespace csv_file_namespace {
 		@return void
 		@details 特になし
 		 */
-		public void init (string input_file_name) {
+		public void init (string input_file_name, bool test_mode = false) {
 
 			//ファイル名
 			m_file_name = input_file_name;
@@ -26,8 +26,37 @@ namespace csv_file_namespace {
 			//領域確保
 			m_string_data = new List<List<string>> ();
 
+			//ファイルの存在確認
+			bool file_exist = target_file_exist ();
+
+			if (file_exist == false) {
+				//ファイルが無いので作成
+				create_initial_file (test_mode);
+
+				//内部データを削除
+				delete_all ();
+			}
+
 			//データ読み込み
 			load_data ();
+		}
+
+		private bool target_file_exist () {
+			return System.IO.File.Exists (m_file_name);
+		}
+
+		private void create_initial_file (bool test_mode) {
+
+			if (test_mode) {
+				add_new_task ("test_name1", "test_detail1", "test_status1");
+				add_new_task ("test_name2", "test_detail2", "test_status2");
+				add_new_task ("test_name3", "test_detail3", "test_status3");
+				add_new_task ("test_name4", "test_detail4", "test_status4");
+
+			} else {
+				add_new_task ("sample_task", "sample_detail", "sample_state");
+			}
+			save_to_file (m_file_name);
 		}
 
 		/** 
@@ -36,6 +65,7 @@ namespace csv_file_namespace {
 		@details 特になし
 		 */
 		private void load_data () {
+			//ファイルが存在するので読み込む
 			using (var sr = new System.IO.StreamReader (m_file_name)) {
 				while (!sr.EndOfStream) {
 					var line = sr.ReadLine ();

@@ -46,7 +46,7 @@ public class csv_test {
         test_obj.init (get_test_file_name (), true);
 
         //テスト
-        //test_obj.save_to_file ("D: \\Unity\\ Android_Sample\\ Assets\\ resource\\ output.txt ");
+        Assert.AreEqual (true, System.IO.File.Exists (get_test_file_name ()));
     }
 
     [Test]

@@ -6,15 +6,14 @@ namespace csv_file_namespace {
 
 	public class csv_file {
 
-		//! ファイル名
-		private string m_file_name;
+		private string m_file_name; //!< ファイル名
 
-		//! データ
-		private List<List<string>> m_string_data;
+		private List<List<string>> m_string_data; //!< データ
 
 		/** 
 		@brief クラスを初期化する
 		@param input_file_name ファイル名
+		@param test_mode trueならテストモード
 		@return void
 		@details 特になし
 		 */
@@ -41,10 +40,21 @@ namespace csv_file_namespace {
 			load_data ();
 		}
 
+		/** 
+		@brief ファイルの存在確認
+		@return ファイルが存在するならtrue
+		@details 特になし
+		*/
 		private bool target_file_exist () {
 			return System.IO.File.Exists (m_file_name);
 		}
 
+		/** 
+		@brief 初期ファイルの生成
+		@param test_mode trueならテスト用のファイルを生成
+		@return なし
+		@details 特になし
+		*/
 		private void create_initial_file (bool test_mode) {
 
 			if (test_mode) {

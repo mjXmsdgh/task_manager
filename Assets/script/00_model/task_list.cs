@@ -15,6 +15,7 @@ namespace task_list_namespace {
 		/** 
 		@brief タスクリストを初期化
 		@param file_name ファイル名
+		@param test_mode trueならテストモード
 		@return void
 		@details 特になし
 		 */
@@ -29,6 +30,7 @@ namespace task_list_namespace {
 		/** 
 		@brief タスクファイルを初期化
 		@param file_name ファイル名
+		@param test_mode trueならテストモード
 		@return void
 		@details 特になし
 		 */

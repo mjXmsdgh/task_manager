@@ -1,0 +1,15 @@
+<map id="csv_file_namespace.csv_file.create_initial_file" name="csv_file_namespace.csv_file.create_initial_file">
+<area shape="rect" id="node2" href="$classcsv__file__namespace_1_1csv__file.html#ac4532fcc33a1ab3d6bf62fdab999eb64" title="クラスを初期化する " alt="" coords="215,140,376,181"/>
+<area shape="rect" id="node3" href="$classtask__list__namespace_1_1task__list.html#a9a365ef61ac80967e7b2d56307f27c2e" title="タスクファイルを初期化 " alt="" coords="424,5,599,47"/>
+<area shape="rect" id="node6" href="$classlist__item__edit.html#af24e953d7a14f7e0d516d2a1509d48b0" title="list_item_edit.check_edit" alt="" coords="428,71,595,98"/>
+<area shape="rect" id="node8" href="$classedit__panel.html#a294570c56503ff400d3286c2647b03ba" title="edit_panel.Start" alt="" coords="455,122,568,149"/>
+<area shape="rect" id="node9" href="$classedit__panel.html#a1d8e8d190c58dfdce84018ae1bfdf696" title="edit_panel.delete_task" alt="" coords="435,173,587,199"/>
+<area shape="rect" id="node12" href="$classedit__panel.html#aedb28a727c2727cdd64c8848ea60e920" title="edit_panel.add_task" alt="" coords="442,223,581,250"/>
+<area shape="rect" id="node13" href="$classedit__panel.html#a7502c8a3efff14489cdc3cde0246d8e5" title="edit_panel.delete_star" alt="" coords="437,274,586,301"/>
+<area shape="rect" id="node4" href="$classtask__list__namespace_1_1task__list.html#a1627a90a98a70190d2ed62b75101dcd1" title="タスクリストを初期化 " alt="" coords="647,5,821,47"/>
+<area shape="rect" id="node5" href="$class_scroll__view__content.html#a57280954f70bd1f6262dc5d665fcfe1a" title="Scroll_view_content.Start" alt="" coords="869,13,1037,39"/>
+<area shape="rect" id="node7" href="$classlist__item__edit.html#aeaf74aac7a24bbd3433a6bf3fdeea57b" title="list_item_edit.OnClick" alt="" coords="659,71,809,98"/>
+<area shape="rect" id="node10" href="$classdelete.html#add7da196d0c63482eaf088b59fca2fae" title="delete.OnClick" alt="" coords="681,173,787,199"/>
+<area shape="rect" id="node11" href="$classok.html#ad7c16878350b46729e696d618b043836" title="ok.OnClick" alt="" coords="691,223,777,250"/>
+<area shape="rect" id="node14" href="$classcancel.html#a58e52c34f9fba6108b1600a2a3591082" title="cancel.OnClick" alt="" coords="679,274,789,301"/>
+</map>

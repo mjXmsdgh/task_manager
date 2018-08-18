@@ -1,0 +1,10 @@
+<map id="task_list_namespace.task_list.init" name="task_list_namespace.task_list.init">
+<area shape="rect" id="node2" href="$classtask__list__namespace_1_1task__list.html#a9a365ef61ac80967e7b2d56307f27c2e" title="タスクファイルを初期化 " alt="" coords="228,5,403,47"/>
+<area shape="rect" id="node5" href="$classcsv__file__namespace_1_1csv__file.html#a8c54e741f2f6c7c54af16c6af2677092" title="タスク数を取得 " alt="" coords="235,71,396,112"/>
+<area shape="rect" id="node6" href="$classtask__list__namespace_1_1task__list.html#a57a504903aed10e2e961e4564f21212c" title="タスクファイルを読み出す " alt="" coords="228,136,403,177"/>
+<area shape="rect" id="node3" href="$classcsv__file__namespace_1_1csv__file.html#ac4532fcc33a1ab3d6bf62fdab999eb64" title="クラスを初期化する " alt="" coords="457,5,619,47"/>
+<area shape="rect" id="node4" href="$classcsv__file__namespace_1_1csv__file.html#aeb21aaa6f56143b8f679d5a05202482f" title="csvデータを読み出す " alt="" coords="684,5,845,47"/>
+<area shape="rect" id="node7" href="$classtask__list__namespace_1_1task__list.html#a4065348e33f91de0f69109094fe162e5" title="タスクアイテムを生成 " alt="" coords="451,136,625,177"/>
+<area shape="rect" id="node8" href="$classtask__data__namespace_1_1task__data.html#a9318c705becc9ebaa3610f9714312bd7" title="タスクを設定 " alt="" coords="673,103,856,144"/>
+<area shape="rect" id="node9" href="$classcsv__file__namespace_1_1csv__file.html#aa76123b69c1bbf243ed88eb837ae53c6" title="データを取得 " alt="" coords="684,168,845,209"/>
+</map>

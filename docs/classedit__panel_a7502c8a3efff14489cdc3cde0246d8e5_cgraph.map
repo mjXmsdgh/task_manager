@@ -1,0 +1,8 @@
+<map id="edit_panel.delete_star" name="edit_panel.delete_star">
+<area shape="rect" id="node2" href="$classcsv__file__namespace_1_1csv__file.html#ac4532fcc33a1ab3d6bf62fdab999eb64" title="クラスを初期化する " alt="" coords="203,5,364,47"/>
+<area shape="rect" id="node4" href="$classcsv__file__namespace_1_1csv__file.html#a8c54e741f2f6c7c54af16c6af2677092" title="タスク数を取得 " alt="" coords="412,161,573,203"/>
+<area shape="rect" id="node5" href="$classcsv__file__namespace_1_1csv__file.html#aa76123b69c1bbf243ed88eb837ae53c6" title="データを取得 " alt="" coords="203,123,364,164"/>
+<area shape="rect" id="node6" href="$classcsv__file__namespace_1_1csv__file.html#a8c9be5f5716b17edd58779f784264891" title="データを取得 " alt="" coords="203,188,364,229"/>
+<area shape="rect" id="node7" href="$classcsv__file__namespace_1_1csv__file.html#a74fb45a0d21af4e74e50b2e6be9b1796" title="ファイルに保存する " alt="" coords="203,253,364,295"/>
+<area shape="rect" id="node3" href="$classcsv__file__namespace_1_1csv__file.html#aeb21aaa6f56143b8f679d5a05202482f" title="csvデータを読み出す " alt="" coords="412,5,573,47"/>
+</map>

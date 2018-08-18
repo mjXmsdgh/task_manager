@@ -1,0 +1,14 @@
+<map id="ok.OnClick" name="ok.OnClick">
+<area shape="rect" id="node2" href="$classedit__panel.html#ae3ffecfbfec0c439d589e93b08817ce5" title="edit_panel.get_task_name" alt="" coords="140,5,315,32"/>
+<area shape="rect" id="node3" href="$classedit__panel.html#aa07879926baea1c91238dfaf678a106e" title="edit_panel.get_task\l_detail" alt="" coords="160,57,295,98"/>
+<area shape="rect" id="node4" href="$classedit__panel.html#aedb28a727c2727cdd64c8848ea60e920" title="edit_panel.add_task" alt="" coords="158,123,297,149"/>
+<area shape="rect" id="node10" href="$classedit__panel.html#a1d8e8d190c58dfdce84018ae1bfdf696" title="edit_panel.delete_task" alt="" coords="151,173,303,200"/>
+<area shape="rect" id="node13" href="$classedit__panel.html#a04bcdb6a93d6fd817017053905897834" title="edit_panel.move_to\l_main_scene" alt="" coords="161,225,294,266"/>
+<area shape="rect" id="node5" href="$classcsv__file__namespace_1_1csv__file.html#ac4532fcc33a1ab3d6bf62fdab999eb64" title="クラスを初期化する " alt="" coords="363,75,524,117"/>
+<area shape="rect" id="node7" href="$classcsv__file__namespace_1_1csv__file.html#a4f8d5b7639d11360f1c9a2e5be4e88f9" title="新しいタスクを設定 " alt="" coords="363,10,524,51"/>
+<area shape="rect" id="node9" href="$classcsv__file__namespace_1_1csv__file.html#a74fb45a0d21af4e74e50b2e6be9b1796" title="ファイルに保存する " alt="" coords="363,141,524,182"/>
+<area shape="rect" id="node6" href="$classcsv__file__namespace_1_1csv__file.html#aeb21aaa6f56143b8f679d5a05202482f" title="csvデータを読み出す " alt="" coords="572,75,733,117"/>
+<area shape="rect" id="node8" href="$classcsv__file__namespace_1_1csv__file.html#a8c54e741f2f6c7c54af16c6af2677092" title="タスク数を取得 " alt="" coords="572,170,733,211"/>
+<area shape="rect" id="node11" href="$classcsv__file__namespace_1_1csv__file.html#aa76123b69c1bbf243ed88eb837ae53c6" title="データを取得 " alt="" coords="363,323,524,365"/>
+<area shape="rect" id="node12" href="$classcsv__file__namespace_1_1csv__file.html#aad10b3cadd927cad71131a1c0501fdc8" title="指定されたタスクを削除 " alt="" coords="363,258,524,299"/>
+</map>

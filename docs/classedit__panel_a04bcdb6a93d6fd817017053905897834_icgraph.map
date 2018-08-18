@@ -1,0 +1,5 @@
+<map id="edit_panel.move_to_main_scene" name="edit_panel.move_to_main_scene">
+<area shape="rect" id="node2" href="$classcancel.html#a58e52c34f9fba6108b1600a2a3591082" title="cancel.OnClick" alt="" coords="187,5,297,32"/>
+<area shape="rect" id="node3" href="$classdelete.html#add7da196d0c63482eaf088b59fca2fae" title="delete.OnClick" alt="" coords="189,56,295,83"/>
+<area shape="rect" id="node4" href="$classok.html#ad7c16878350b46729e696d618b043836" title="ok.OnClick" alt="" coords="199,107,285,133"/>
+</map>

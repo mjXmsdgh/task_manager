@@ -1,0 +1,11 @@
+<map id="csv_file_namespace.csv_file.save_to_file" name="csv_file_namespace.csv_file.save_to_file">
+<area shape="rect" id="node2" href="$classlist__item__edit.html#af24e953d7a14f7e0d516d2a1509d48b0" title="list_item_edit.check_edit" alt="" coords="215,5,381,32"/>
+<area shape="rect" id="node4" href="$classedit__panel.html#a294570c56503ff400d3286c2647b03ba" title="edit_panel.Start" alt="" coords="241,56,355,83"/>
+<area shape="rect" id="node5" href="$classedit__panel.html#a1d8e8d190c58dfdce84018ae1bfdf696" title="edit_panel.delete_task" alt="" coords="222,107,374,133"/>
+<area shape="rect" id="node8" href="$classedit__panel.html#aedb28a727c2727cdd64c8848ea60e920" title="edit_panel.add_task" alt="" coords="229,157,367,184"/>
+<area shape="rect" id="node9" href="$classedit__panel.html#a7502c8a3efff14489cdc3cde0246d8e5" title="edit_panel.delete_star" alt="" coords="223,208,373,235"/>
+<area shape="rect" id="node3" href="$classlist__item__edit.html#aeaf74aac7a24bbd3433a6bf3fdeea57b" title="list_item_edit.OnClick" alt="" coords="429,5,579,32"/>
+<area shape="rect" id="node6" href="$classdelete.html#add7da196d0c63482eaf088b59fca2fae" title="delete.OnClick" alt="" coords="451,107,557,133"/>
+<area shape="rect" id="node7" href="$classok.html#ad7c16878350b46729e696d618b043836" title="ok.OnClick" alt="" coords="461,157,547,184"/>
+<area shape="rect" id="node10" href="$classcancel.html#a58e52c34f9fba6108b1600a2a3591082" title="cancel.OnClick" alt="" coords="449,208,559,235"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="node2" href="$classadd__new__item.html" title="add_new_item" alt="" coords="179,5,285,32"/>
+<area shape="rect" id="node3" href="$classcancel.html" title="cancel" alt="" coords="202,56,262,83"/>
+<area shape="rect" id="node4" href="$classdelete.html" title="delete" alt="" coords="203,107,261,133"/>
+<area shape="rect" id="node5" href="$classdelete__all.html" title="delete_all" alt="" coords="193,157,271,184"/>
+<area shape="rect" id="node6" href="$classedit__panel.html" title="edit_panel" alt="" coords="191,208,273,235"/>
+<area shape="rect" id="node7" href="$classlist__item__edit.html" title="list_item_edit" alt="" coords="183,259,281,285"/>
+<area shape="rect" id="node8" href="$classok.html" title="ok" alt="" coords="213,309,251,336"/>
+<area shape="rect" id="node9" href="$classrenew.html" title="renew" alt="" coords="204,360,260,387"/>
+<area shape="rect" id="node10" href="$class_scroll__view__content.html" title="Scroll_view_content" alt="" coords="164,411,300,437"/>
+<area shape="rect" id="node11" href="$classtask__data___g_u_i.html" title="task_data_GUI" alt="" coords="178,461,286,488"/>
+</map>

@@ -27,12 +27,12 @@ public class csv_test {
     public void test_init () {
         //初期化
         csv_file test_obj = new csv_file ();
-        test_obj.init (get_test_file_name (), true);
 
         //処理
-        Assert.AreEqual (4, test_obj.get_task_number ());
+        test_obj.init (get_test_file_name (), true);
 
         //テスト
+        Assert.AreEqual (4, test_obj.get_task_number ());
         Assert.AreEqual ("1", test_obj.get_data (0, 0));
         Assert.AreEqual ("test_name1", test_obj.get_data (0, 1));
         Assert.AreEqual ("test_detail1", test_obj.get_data (0, 2));
@@ -51,17 +51,31 @@ public class csv_test {
 
     [Test]
     public void test_get_data () {
-
+        test_init ();
     }
 
     [Test]
     public void test_set_data () {
+        //初期化
+        csv_file test_obj = new csv_file ();
+        test_obj.init (get_test_file_name (), true);
 
+        //処理前テスト
+        Assert.AreEqual ("1", test_obj.get_data (0, 0));
+        Assert.AreEqual ("test_name1", test_obj.get_data (0, 1));
+        Assert.AreEqual ("test_detail1", test_obj.get_data (0, 2));
+        Assert.AreEqual ("test_status1", test_obj.get_data (0, 3));
+
+        //処理
+        test_obj.set_data (0, 0, "test_string");
+
+        //処理後テスト
+        Assert.AreEqual ("test_string", test_obj.get_data (0, 0));
     }
 
     [Test]
     public void test_get_task_number () {
-
+        test_init ();
     }
 
     [Test]

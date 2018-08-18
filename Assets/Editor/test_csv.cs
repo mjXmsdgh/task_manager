@@ -159,4 +159,17 @@ public class csv_test {
         //ファイルを削除
         delete_test_folder ();
     }
+
+    [Test]
+    public void test_delete_file () {
+        //初期化
+        csv_file test_obj = new csv_file ();
+        test_obj.init (get_test_file_name (), true);
+
+        //処理
+        test_obj.delete_file ();
+
+        //確認
+        Assert.AreEqual (false, System.IO.File.Exists (get_test_file_name ()));
+    }
 }

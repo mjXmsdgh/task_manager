@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace csv_file_namespace {
@@ -193,6 +194,11 @@ namespace csv_file_namespace {
 		*/
 		public void delete_all () {
 			m_string_data.RemoveRange (0, get_task_number ());
+		}
+
+		public void delete_file () {
+			FileInfo file = new FileInfo (m_file_name);
+			file.Delete ();
 		}
 	}
 }

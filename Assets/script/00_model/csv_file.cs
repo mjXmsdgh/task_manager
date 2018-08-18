@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace csv_file_namespace {
 
 	public class csv_file {
 
-		//! ファイル名
-		private string m_file_name;
+		private string m_file_name; //!< ファイル名
 
-		//! データ
-		private List<List<string>> m_string_data;
+		private List<List<string>> m_string_data; //!< データ
 
 		/** 
 		@brief クラスを初期化する
 		@param input_file_name ファイル名
+		@param test_mode trueならテストモード
 		@return void
 		@details 特になし
 		 */
-		public void init (string input_file_name) {
+		public void init (string input_file_name, bool test_mode = false) {
 
 			//ファイル名
 			m_file_name = input_file_name;
@@ -26,8 +26,46 @@ namespace csv_file_namespace {
 			//領域確保
 			m_string_data = new List<List<string>> ();
 
+			//ファイルの存在確認
+			bool file_exist = target_file_exist ();
+
+			if (file_exist == false) {
+				//ファイルが無いので作成
+				create_initial_file (test_mode);
+
+				//内部データを削除
+				delete_all ();
+			}
+
 			//データ読み込み
 			load_data ();
+		}
+
+		/** 
+		@brief ファイルの存在確認
+		@return ファイルが存在するならtrue
+		@details 特になし
+		*/
+		private bool target_file_exist () {
+			return System.IO.File.Exists (m_file_name);
+		}
+
+		/** 
+		@brief 初期ファイルの生成
+		@param test_mode trueならテスト用のファイルを生成
+		@return なし
+		@details 特になし
+		*/
+		private void create_initial_file (bool test_mode) {
+
+			if (test_mode) {
+				add_new_task ("test_name1", "test_detail1", "test_status1");
+				add_new_task ("test_name2", "test_detail2", "test_status2");
+				add_new_task ("test_name3", "test_detail3", "test_status3");
+				add_new_task ("test_name4", "test_detail4", "test_status4");
+
+			}
+			save_to_file (m_file_name);
 		}
 
 		/** 
@@ -36,6 +74,7 @@ namespace csv_file_namespace {
 		@details 特になし
 		 */
 		private void load_data () {
+			//ファイルが存在するので読み込む
 			using (var sr = new System.IO.StreamReader (m_file_name)) {
 				while (!sr.EndOfStream) {
 					var line = sr.ReadLine ();
@@ -90,7 +129,7 @@ namespace csv_file_namespace {
 		}
 
 		/** 
-		@brief データを取得
+		@brief データを設定
 		@param row 行
 		@param column 列
 		@param data データ
@@ -153,6 +192,16 @@ namespace csv_file_namespace {
 		*/
 		public void delete_all () {
 			m_string_data.RemoveRange (0, get_task_number ());
+		}
+
+		/** 
+		@brief タスクファイルを削除
+		@return void
+		@details 特になし
+		*/
+		public void delete_file () {
+			FileInfo file = new FileInfo (m_file_name);
+			file.Delete ();
 		}
 	}
 }

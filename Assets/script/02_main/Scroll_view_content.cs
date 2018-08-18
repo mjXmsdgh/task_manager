@@ -22,8 +22,6 @@ public class Scroll_view_content : MonoBehaviour {
 		my_util.set_file_name (Application.persistentDataPath);
 		m_file_name = my_util.get_file_name ();
 
-		Debug.Log (my_util.get_file_name ());
-
 		content = GetComponent<RectTransform> ();
 
 		my_task_list = new task_list ();
@@ -90,4 +88,9 @@ public class Scroll_view_content : MonoBehaviour {
 		}
 	}
 
+	public void delete_task_file () {
+		my_task_list.delete_task_file ();
+		my_task_list.delete_all_task ();
+		renew_item ();
+	}
 }

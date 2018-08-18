@@ -18,8 +18,8 @@ namespace task_list_namespace {
 		@return void
 		@details 特になし
 		 */
-		public void init (string file_name) {
-			init_data_source (file_name);
+		public void init (string file_name, bool test_mode = false) {
+			init_data_source (file_name, test_mode);
 
 			int number = my_file.get_task_number ();
 
@@ -32,9 +32,9 @@ namespace task_list_namespace {
 		@return void
 		@details 特になし
 		 */
-		private void init_data_source (string file_name) {
+		private void init_data_source (string file_name, bool test_mode) {
 			my_file = new csv_file ();
-			my_file.init (file_name);
+			my_file.init (file_name, test_mode);
 		}
 
 		/** 
@@ -43,7 +43,7 @@ namespace task_list_namespace {
 		@return void
 		@details 特になし
 		*/
-		public void load_task_list (int number) {
+		private void load_task_list (int number) {
 			my_task_list = new List<task_data> ();
 			for (int index = 0; index < number; index++) {
 				my_task_list.Add (create_item (index));
@@ -68,28 +68,13 @@ namespace task_list_namespace {
 			return my_task;
 		}
 
+		/** 
+		@brief タスク数を取得
+		@return タスク数
+		@details 特になし
+		*/
 		public int get_item_count () {
 			return my_task_list.Count;
-		}
-
-		public void delete_item (string ID) {
-			for (int i = 0; i < get_item_count (); i++) {
-				if (my_task_list[i].ID == ID) {
-					my_task_list.RemoveAt (i);
-					break;
-				}
-			}
-		}
-
-		public void delete_all_task () {
-			my_task_list.Clear ();
-		}
-
-		public void add_item (string ID, string name, string detail, string status) {
-			task_data temp = new task_data ();
-			temp.setup (ID, name, detail, status);
-
-			my_task_list.Add (temp);
 		}
 	}
 }

@@ -32,52 +32,28 @@ public class test_task_list {
         test_obj = new task_list ();
 
         //処理
-        test_obj.init (get_test_file_name ());
-
-        //テスト
-    }
-
-    [Test]
-    public void test_init_data_source () {
-
-    }
-
-    [Test]
-    public void test_load_task_list () {
-        //初期化
-        task_list test_obj;
-        test_obj = new task_list ();
-
-        test_obj.init (get_test_file_name ());
-
-        int num = test_obj.get_item_count ();
-
-        //処理
-        test_obj.load_task_list (num);
+        test_obj.init (get_test_file_name (), true);
 
         //テスト
         Assert.AreEqual ("1", test_obj.my_task_list[0].ID);
-        Assert.AreEqual ("task_name1", test_obj.my_task_list[0].name);
-        Assert.AreEqual ("my_detail1", test_obj.my_task_list[0].detail);
-        Assert.AreEqual ("my_status1", test_obj.my_task_list[0].status);
+        Assert.AreEqual ("test_name1", test_obj.my_task_list[0].name);
+        Assert.AreEqual ("test_detail1", test_obj.my_task_list[0].detail);
+        Assert.AreEqual ("test_status1", test_obj.my_task_list[0].status);
+
+        Assert.AreEqual ("2", test_obj.my_task_list[1].ID);
+        Assert.AreEqual ("test_name2", test_obj.my_task_list[1].name);
+        Assert.AreEqual ("test_detail2", test_obj.my_task_list[1].detail);
+        Assert.AreEqual ("test_status2", test_obj.my_task_list[1].status);
+
+        Assert.AreEqual ("3", test_obj.my_task_list[2].ID);
+        Assert.AreEqual ("test_name3", test_obj.my_task_list[2].name);
+        Assert.AreEqual ("test_detail3", test_obj.my_task_list[2].detail);
+        Assert.AreEqual ("test_status3", test_obj.my_task_list[2].status);
 
         Assert.AreEqual ("4", test_obj.my_task_list[3].ID);
-        Assert.AreEqual ("task_name4", test_obj.my_task_list[3].name);
-        Assert.AreEqual ("my_detail4", test_obj.my_task_list[3].detail);
-        Assert.AreEqual ("my_status4", test_obj.my_task_list[3].status);
-    }
-
-    [Test]
-    public void test_save_task_list () {
-        //初期化
-        task_list test_obj;
-        test_obj = new task_list ();
-        test_obj.init (get_test_file_name ());
-
-        //処理
-        //test_obj.save_task_list ("D:\\Unity\\Android_Sample\\Assets\\resource\\output_text.txt"
-
-        //テスト
+        Assert.AreEqual ("test_name4", test_obj.my_task_list[3].name);
+        Assert.AreEqual ("test_detail4", test_obj.my_task_list[3].detail);
+        Assert.AreEqual ("test_status4", test_obj.my_task_list[3].status);
     }
 
     [Test]
@@ -85,7 +61,7 @@ public class test_task_list {
         //初期化
         task_list test_obj;
         test_obj = new task_list ();
-        test_obj.init (get_test_file_name ());
+        test_obj.init (get_test_file_name (), true);
 
         //処理
         int num = test_obj.get_item_count ();
@@ -94,32 +70,4 @@ public class test_task_list {
         Assert.AreEqual (4, num);
     }
 
-    [Test]
-    public void test_delete_item () {
-        //初期化
-        task_list test_obj;
-        test_obj = new task_list ();
-        test_obj.init (get_test_file_name ());
-
-        //処理
-        test_obj.delete_item ("1");
-        test_obj.get_item_count ();
-
-        //テスト
-        Assert.AreEqual (3, test_obj.get_item_count ());
-    }
-
-    [Test]
-    public void test_add_item () {
-        //初期化
-        task_list test_obj;
-        test_obj = new task_list ();
-        test_obj.init (get_test_file_name ());
-
-        //処理
-        test_obj.add_item ("5", "new_item", "new_detail", "new_status");
-
-        //テスト
-        Assert.AreEqual (5, test_obj.get_item_count ());
-    }
 }

@@ -105,11 +105,9 @@ public class csv_test {
         test_obj.delete_task ("1");
         //テスト
         Assert.AreEqual (3, test_obj.get_task_number ());
-
-        //処理
-        test_obj.delete_task ("3");
-        //テスト
-        Assert.AreEqual (2, test_obj.get_task_number ());
+        Assert.AreEqual ("2", test_obj.get_data (0, 0));
+        Assert.AreEqual ("3", test_obj.get_data (1, 0));
+        Assert.AreEqual ("4", test_obj.get_data (2, 0));
     }
 
     [Test]

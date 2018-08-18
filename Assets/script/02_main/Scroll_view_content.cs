@@ -90,4 +90,7 @@ public class Scroll_view_content : MonoBehaviour {
 		}
 	}
 
+	public void delete_task_file () {
+		my_task_list.delete_task_file ();
+	}
 }

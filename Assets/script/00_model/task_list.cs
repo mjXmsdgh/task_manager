@@ -78,5 +78,9 @@ namespace task_list_namespace {
 		public int get_item_count () {
 			return my_task_list.Count;
 		}
+
+		public void delete_task_file () {
+			my_file.delete_file ();
+		}
 	}
 }

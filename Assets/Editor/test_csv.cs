@@ -89,6 +89,10 @@ public class csv_test {
 
         //テスト
         Assert.AreEqual (5, test_obj.get_task_number ());
+        Assert.AreEqual ("5", test_obj.get_data (4, 0));
+        Assert.AreEqual ("new_task_name", test_obj.get_data (4, 1));
+        Assert.AreEqual ("new_task_detail", test_obj.get_data (4, 2));
+        Assert.AreEqual ("new_status", test_obj.get_data (4, 3));
     }
 
     [Test]

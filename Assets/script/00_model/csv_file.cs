@@ -64,8 +64,6 @@ namespace csv_file_namespace {
 				add_new_task ("test_name3", "test_detail3", "test_status3");
 				add_new_task ("test_name4", "test_detail4", "test_status4");
 
-			} else {
-				add_new_task ("sample_task", "sample_detail", "sample_state");
 			}
 			save_to_file (m_file_name);
 		}
@@ -196,6 +194,11 @@ namespace csv_file_namespace {
 			m_string_data.RemoveRange (0, get_task_number ());
 		}
 
+		/** 
+		@brief タスクファイルを削除
+		@return void
+		@details 特になし
+		*/
 		public void delete_file () {
 			FileInfo file = new FileInfo (m_file_name);
 			file.Delete ();

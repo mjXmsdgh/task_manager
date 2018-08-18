@@ -79,8 +79,22 @@ namespace task_list_namespace {
 			return my_task_list.Count;
 		}
 
+		/** 
+		@brief タスクファイルを削除
+		@return なし
+		@details 特になし
+		*/
 		public void delete_task_file () {
 			my_file.delete_file ();
+		}
+
+		/** 
+		@brief タスクを削除
+		@return なし
+		@details 特になし
+		*/
+		public void delete_all_task () {
+			my_task_list.Clear ();
 		}
 	}
 }

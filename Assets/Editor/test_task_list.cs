@@ -93,4 +93,35 @@ public class test_task_list {
         delete_test_folder ();
     }
 
+    [Test]
+    public void test_delete_task_file () {
+        //初期化
+        task_list test_obj;
+        test_obj = new task_list ();
+        test_obj.init (get_test_file_name (), true);
+
+        //処理
+        test_obj.delete_task_file ();
+
+        //確認
+        Assert.AreEqual (false, System.IO.File.Exists (get_test_file_name ()));
+    }
+
+    [Test]
+    public void test_delete_all_task () {
+        //初期化
+        task_list test_obj;
+        test_obj = new task_list ();
+        test_obj.init (get_test_file_name (), true);
+
+        //処理前の確認
+        Assert.AreEqual (4, test_obj.get_item_count ());
+
+        //処理
+        test_obj.delete_all_task ();
+
+        //処理後の確認
+        Assert.AreEqual (0, test_obj.get_item_count ());
+    }
+
 }
